@@ -1,0 +1,340 @@
+
+
+/* - - - - - - - - - - FONTS - - - - - - - - - -  */
+.Register, h1, h2 {
+	/*font-family: "julee";*/
+	/*font-family: "Kalam";*/
+	/*font-family: "Gloria Hallelujah";*/
+	/*font-family: "architects daughter" sans-serif;*/
+	/*font-family: "coming soon";*/
+	font-family: "copperplate" "arial black" sans-serif;
+}
+
+
+h3{
+	/*font-family: "dosis";*/
+	font-family: "arial black" sans-serif;
+}
+
+body, nav ul li a{
+	/*font-family: "trebuchet ms";*/
+	/*font-family: sans-serif;*/
+	font-family: sans-serif;
+}
+/* - - - - - - - - - - END FONTS - - - - - - - - - -  */
+
+
+/* - - - - - - - - - - NAVIGATION - - - - - - - - - -  */
+nav ul li {  /*individual items :navigation*/
+	display: inline-block;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+nav ul li a{  /*text items (links) :navigation*/
+	width: 100%;
+	color: #3a8f95;	
+	text-decoration: none;
+}
+
+.active{
+	color: #45b2b4;
+}
+
+.active:hover{
+	color: black;
+}
+
+a:active {
+	color: white;
+}
+
+a:hover {
+	color: black;
+}
+
+.Register:hover {
+	color: black;
+}
+/* - - - - - - - - - - END NAVIGATION - - - - - - - - - -  */
+
+
+
+/* - - - - - - - - - - - - BODY - - - - - - - - - - - -  */
+body{
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	/*background-image: url("img/woodBack2.jpg");*/
+	background-color: #d7e8ed;
+	font-size: 1.2em;
+	color: #2c6c70;
+}
+
+.importantDates li{  /*list-index*/
+	padding-top: 10px;
+}
+
+.longParagraph{  /*increase leading for readability*/
+	line-height: 1.3em;
+}
+
+.info{  /*main-body-content-divider*/
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.smallerHeading{
+	font-size: .9em;
+}
+
+.center{
+	text-align: center;
+}
+
+a{color: #3a8f95;}
+
+li{list-style: none;}
+
+h1{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+h2{
+	font-size: 1.2em;
+	color: #40a8aa;
+	margin-top: 50px;
+}
+
+h3{
+	font-size: .8em;
+	font-weight: bold;
+	color: #1F4C4E;
+	margin-top: 10px;
+}
+
+h5{
+	font-size: .75em;
+}
+/* - - - - - - - - - - - - END BODY - - - - - - - - - - - -  */
+
+
+
+/* - - - - - - - - - - - - PHOTOS - - - - - - - - - - - -  */
+.gallery{
+	width: 111%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+/*grid*/
+.gallery li{
+	display: inline-block;
+	margin: 0 1% 1% 0;
+	position: relative;
+	width: 29%;
+	overflow: hidden;
+}
+
+/* double column when on mobile*/
+@media (max-width: 499px){.gallery li{width: 44%;}}
+
+.photo{
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+span.text{ /*text over image*/
+	background: rgba(0,0,0,0.5);
+	color: white;
+	display: table;
+	height: 35px; /*height of black box around text*/
+	left: 0;
+	bottom: 15px;
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+	-webkit-transition:opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
+}
+
+/*hover over each image*/
+ul.gallery li:hover span.text { 
+	opacity: 1;
+}
+
+/*table-cell allows verticle align to place in middle*/
+/*place text in the center of black box vertically*/
+span.text span{
+	display: table-cell;
+	font-size: .8em;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/*dont show highlight when on mobile*/
+@media (max-width: 499px){ul.gallery li:hover span.text{display:none;}}
+
+/*lightbox effects*/
+.gallery a {
+	text-decoration: none;
+}
+
+.gallery li a {
+	overflow: hidden;
+}
+
+.gallery li a img {
+	height: 100%;
+	align-self: center;
+}
+
+.lightbox {
+	/*Hide the lightbox*/
+	opacity: 0;
+
+	/*Lightbox Styling (appears as fixed box ontop of page)*/
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	top: -100%;
+	color: #333333;
+/*	-webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;*/
+}
+
+.lightbox:target{
+	/*show lightbox when it's target*/
+	opacity: 1;
+	outline: none;
+	top: 0;
+	left: 0px;
+	background: rgba(0,0,0,.5);
+}
+
+.lightbox .box {
+	/*width: -webkit-min-content;*/
+/*    width: -moz-min-content;
+    width: min-content;*/
+    /*width: 60%;*/
+    max-width: 700px;
+    margin: 5% auto;
+    padding: 2%;
+    background-color: #FFF;
+    box-shadow: 0px 1px 26px -3px #111;
+}
+
+@media (min-width: 720px){.lightbox .box{width: 60%;}}
+@media (max-width: 720px) and (min-width: 500px){.lightbox .box{width: 400px;}}
+@media (max-width: 499px){.lightbox .box{width: 90%;}}
+
+.lightbox .title {
+    font-size: 1em;
+    text-align: center;
+    color: gray;
+    }
+
+/*image + any text*/
+.lightbox .content {
+    margin-top: 10px;
+    margin-bottom: -50px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    }
+
+.content img {
+	text-align: center;
+	width: 100%;
+	max-width: 700px;
+}
+
+.content .tallpic {
+	width: 50%;
+}
+
+.next, .prev {
+	text-decoration: none;
+	font-size: 4em;
+	position: relative;
+	top: -30px;
+	z-index: 9999;
+}
+.next{float: right;}
+.prev{float: left;}
+
+/*portrait photos*/
+.nextTallPic, .prevTallPic {
+	text-decoration: none;
+	height: 5px;
+	font-size: 4em;
+	position: relative;
+	bottom: 70px;
+	z-index: 9999;
+}
+.nextTallPic{float: right;}
+.prevTallPic{float: left;}
+ 
+
+.lightbox .close {
+    display: block;
+    float: right;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #858585;
+    }
+ 
+.clear {
+    display: block;
+    clear: both;
+    }
+
+/* - - - - - - - - - - - - END PHOTOS - - - - - - - - - - - -  */
+
+
+
+/* - - - - - - - - - - - - FOOTER - - - - - - - - - - - -  */
+footer{
+	width: 100%;
+	height: 20px;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	padding: 10px 0px 10px 0px;
+	background-color: white;
+}
+
+.footerIcons{  /*group of social media icons*/
+	padding-top: 15px;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+.socialMedia{  /*each social media icon*/
+	height: 60px;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px; 
+	position: relative;
+	z-index: 10;
+	margin-bottom: 20px;
+}
+
+.footerText{
+	text-align: center;
+	font-size: .8em;
+	position: relative;
+}
+/* - - - - - - - - - - - - END FOOTER - - - - - - - - - - - -  */
+

@@ -1,0 +1,44 @@
+.Register{
+	width: 94%;
+	color: #3a8f95;	
+	text-decoration: none;
+	font-size: 2em;
+	position: absolute;
+	top: -70px;
+	z-index: 100;
+}
+
+/*not mobile*/
+@media (min-width: 500px){
+	/*hide the Register button in navigation*/
+	.nav-register{display: none;
+	}
+}
+
+
+/*big webpage*/
+@media (min-width: 720px){
+	.Register {
+		text-align: right;
+	}
+}
+
+/*small webpage*/
+@media (max-width: 720px) and (min-width: 500px){
+	.Register {
+		text-align: center;
+		padding-left: 20%;
+	}
+}
+
+
+/*mobile*/
+@media (max-width: 499px){
+	.Register{
+		display: none;
+	}
+	.nav-register{
+		font-size: 1.5em;
+	}
+
+}
