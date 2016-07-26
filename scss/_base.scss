@@ -1,7 +1,18 @@
 /* /scss/_base.scss */
 
+// Variable Declarations
+	// Font
+		$my-font: 'Open Sans';
+	
+	// Colours
+		$flat-ui-blue: #3498db;
+		$background-color: #efefef;
+
 // Body Style
+	* {
+		margin: 0;
+	}
 	body {
-		font: $font-stack;
+		font-family:  $my-font;
 		background-color: $background-color;
 	}

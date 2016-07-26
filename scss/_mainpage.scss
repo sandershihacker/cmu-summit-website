@@ -1,0 +1,13 @@
+/* /scss/_mainpage.scss */
+
+// Cover
+  div.cover {
+    background-color: $flat-ui-blue;
+    width: 100%;
+    height: 100vh;
+    color: $background-color;
+    h1 {
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
