@@ -1,11 +1,36 @@
 /* /scss/summit.scss */
 /* /scss/_base.scss */
+.gradient, div.cover {
+  background: #3498db;
+  background: -webkit-linear-gradient(#2ba3d4, #3498db);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#2ba3d4, #3498db);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#2ba3d4, #3498db);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#2ba3d4, #3498db);
+  /* Standard syntax */ }
+
 * {
   margin: 0; }
 
 body {
   font-family: "Open Sans";
   background-color: #efefef; }
+
+.section-white {
+  background-color: #efefef;
+  padding: 20px; }
+
+.section-wrapper {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto; }
+
+.footer {
+  padding: 20px;
+  background-color: #252525;
+  color: #efefef; }
 
 /* /scss/_fonts.scss */
 /* open-sans-300 - latin */
@@ -100,7 +125,6 @@ body {
   /* Legacy iOS */ }
 /* /scss/_mainpage.scss */
 div.cover {
-  background-color: #3498db;
   width: 100%;
   height: 100vh; }
   div.cover h1 {
@@ -115,3 +139,46 @@ div.cover {
     font-size: 20px;
     font-weight: 300;
     color: #efefef; }
+
+/* /scss/_navbar.scss */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  transition: 0.3; }
+  .navbar a:link, .navbar a:visited {
+    text-decoration: none;
+    display: block;
+    float: right;
+    padding: 7px;
+    font-weight: 300;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-left: 10px; }
+  .navbar a:hover {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s; }
+  .navbar a.right-most-button {
+    margin-right: 25px; }
+
+.navbar-fixed {
+  background-color: black;
+  -webkit-box-shadow: 0px 10px 29px -6px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 10px 29px -6px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 10px 29px -6px rgba(0, 0, 0, 0.45);
+  transition: 0.3s; }
+  .navbar-fixed a:link, .navbar-fixed a:visited {
+    color: #afafaf; }
+  .navbar-fixed a:hover {
+    background-color: rgba(255, 255, 255, 0.1); }
+
+.navbar-scroll {
+  background-color: transparent;
+  transition: 0.3s; }
+  .navbar-scroll a:link, .navbar-scroll a:visited {
+    color: #efefef; }
+  .navbar-scroll a:hover {
+    background-color: rgba(0, 0, 0, 0.1); }

@@ -2,7 +2,7 @@
 
 // Cover
   div.cover {
-    background-color: $flat-ui-blue;
+    @extend .gradient;
     width: 100%;
     height: 100vh;
     h1 {
