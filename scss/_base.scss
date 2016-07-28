@@ -9,7 +9,9 @@
 		$flat-ui-blue: #2ba3d4;
 		$blue-shaddow: #2387ca;
 		$dark-blue: #1a237e;
+		$darker-grey: #191919;
 		$dark-grey: #252525;
+		$light-grey: #afafaf;
 		$background-color: #efefef;
 		
 	// Sizes
@@ -31,22 +33,18 @@
 	body {
 		font-family:  $my-font;
 		background-color: $background-color;
+		h1, h2, h3, h4, h5, h6 {
+			font-family: $my-font;
+			font-weight: 300;
+		}
 	}
 
 // Sections
 	.section-white {
 		background-color: $background-color;
-		padding: 20px;
 	}
 	.section-wrapper {
-		width: 100%;
 		max-width: $max-width;
 		margin: 0 auto;
-	}
-
-// Footer
-	.footer {
-		padding: 20px;
-		background-color: $dark-grey;
-		color: $background-color;
+		padding: 30px;
 	}

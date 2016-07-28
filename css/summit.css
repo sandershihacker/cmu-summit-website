@@ -17,20 +17,17 @@
 body {
   font-family: "Open Sans";
   background-color: #efefef; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: "Open Sans";
+    font-weight: 300; }
 
 .section-white {
-  background-color: #efefef;
-  padding: 20px; }
+  background-color: #efefef; }
 
 .section-wrapper {
-  width: 100%;
   max-width: 1260px;
-  margin: 0 auto; }
-
-.footer {
-  padding: 20px;
-  background-color: #252525;
-  color: #efefef; }
+  margin: 0 auto;
+  padding: 30px; }
 
 /* /scss/_fonts.scss */
 /* open-sans-300 - latin */
@@ -126,7 +123,8 @@ body {
 /* /scss/_mainpage.scss */
 div.cover {
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  text-align: center; }
   div.cover h1 {
     text-align: center;
     padding-top: 40vh;
@@ -139,6 +137,10 @@ div.cover {
     font-size: 20px;
     font-weight: 300;
     color: #efefef; }
+  div.cover a {
+    color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 30px; }
 
 /* /scss/_navbar.scss */
 .navbar {
@@ -148,21 +150,36 @@ div.cover {
   width: 100%;
   padding: 10px;
   transition: 0.3; }
-  .navbar a:link, .navbar a:visited {
-    text-decoration: none;
-    display: block;
-    float: right;
-    padding: 7px;
-    font-weight: 300;
-    transition: 0.3s;
-    border-radius: 5px;
-    margin-left: 10px; }
-  .navbar a:hover {
-    text-decoration: none;
-    color: white;
+  .navbar .navbar-links {
+    float: right; }
+    .navbar .navbar-links a:link, .navbar .navbar-links a:visited {
+      text-decoration: none;
+      display: block;
+      float: right;
+      padding: 7px;
+      font-weight: 300;
+      transition: 0.3s;
+      border-radius: 5px;
+      margin-left: 10px; }
+    .navbar .navbar-links a:hover {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s; }
+    .navbar .navbar-links a.right-most-button {
+      margin-right: 25px; }
+  .navbar .navbar-wrapper {
+    max-width: 1260px;
+    margin: 0 auto; }
+  .navbar .logo {
+    float: left;
+    display: none;
     transition: 0.3s; }
-  .navbar a.right-most-button {
-    margin-right: 25px; }
+    .navbar .logo a:link, .navbar .logo a:visited, .navbar .logo a:hover {
+      float: left;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      line-height: 34px; }
 
 .navbar-fixed {
   background-color: black;
@@ -170,15 +187,51 @@ div.cover {
   -moz-box-shadow: 0px 10px 29px -6px rgba(0, 0, 0, 0.45);
   box-shadow: 0px 10px 29px -6px rgba(0, 0, 0, 0.45);
   transition: 0.3s; }
-  .navbar-fixed a:link, .navbar-fixed a:visited {
+  .navbar-fixed .navbar-links a:link, .navbar-fixed .navbar-links a:visited {
     color: #afafaf; }
-  .navbar-fixed a:hover {
+  .navbar-fixed .navbar-links a:hover {
     background-color: rgba(255, 255, 255, 0.1); }
+  .navbar-fixed .logo {
+    display: block;
+    transition: 0.3s; }
 
 .navbar-scroll {
   background-color: transparent;
   transition: 0.3s; }
-  .navbar-scroll a:link, .navbar-scroll a:visited {
+  .navbar-scroll .navbar-links a:link, .navbar-scroll .navbar-links a:visited {
     color: #efefef; }
-  .navbar-scroll a:hover {
+  .navbar-scroll .navbar-links a:hover {
     background-color: rgba(0, 0, 0, 0.1); }
+  .navbar-scroll .logo {
+    display: none;
+    transition: 0.3s; }
+
+/* /scss/_footer.scss */
+.footer {
+  background-color: #252525;
+  color: #efefef; }
+  .footer h2 {
+    color: #afafaf; }
+  .footer a:link, .footer a:visited {
+    text-decoration: none;
+    color: #afafaf; }
+  .footer a:hover {
+    text-decoration: none;
+    color: white; }
+  .footer i {
+    margin-right: 5px; }
+  .footer ul li {
+    margin-bottom: 10px; }
+    .footer ul li p {
+      margin: 0;
+      font-weight: 600; }
+  .footer .footer-wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px; }
+  .footer .copyright {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #191919; }
