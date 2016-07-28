@@ -142,6 +142,9 @@ div.cover {
     position: absolute;
     bottom: 30px; }
 
+.demo-picture {
+  text-align: center; }
+
 /* /scss/_navbar.scss */
 .navbar {
   position: fixed;
