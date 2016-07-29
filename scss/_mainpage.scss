@@ -27,6 +27,27 @@
     }
   }
 
-  .demo-picture {
+  .about-section {
+    a:link, a:visited {
+      text-decoration: none;
+      color: $dark-grey;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: none;
+      color: $darker-grey;
+    }
+    .demo-picture {
+      text-align: center;
+      img {
+        height: 500px;
+      }
+    }
+  }
+
+  .demo-picture-2 {
     text-align: center;
+    img {
+      height: 400px;
+    }
   }

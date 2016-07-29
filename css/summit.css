@@ -1,6 +1,6 @@
 /* /scss/summit.scss */
 /* /scss/_base.scss */
-.gradient, div.cover {
+.gradient, .section-blue, div.cover {
   background: #3498db;
   background: -webkit-linear-gradient(#2ba3d4, #3498db);
   /* For Safari 5.1 to 6.0 */
@@ -23,6 +23,11 @@ body {
 
 .section-white {
   background-color: #efefef; }
+
+.section-blue {
+  color: #efefef; }
+  .section-blue h1 {
+    color: #efefef; }
 
 .section-wrapper {
   max-width: 1260px;
@@ -142,12 +147,27 @@ div.cover {
     position: absolute;
     bottom: 30px; }
 
-.demo-picture {
+.about-section a:link, .about-section a:visited {
+  text-decoration: none;
+  color: #252525;
+  font-weight: 600; }
+.about-section a:hover {
+  text-decoration: none;
+  color: #191919; }
+.about-section .demo-picture {
   text-align: center; }
+  .about-section .demo-picture img {
+    height: 500px; }
+
+.demo-picture-2 {
+  text-align: center; }
+  .demo-picture-2 img {
+    height: 400px; }
 
 /* /scss/_navbar.scss */
 .navbar {
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;

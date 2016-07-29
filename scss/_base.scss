@@ -43,6 +43,13 @@
 	.section-white {
 		background-color: $background-color;
 	}
+	.section-blue {
+	 	@extend .gradient;
+		 color: $background-color;
+		 h1 {
+			 color: $background-color;
+		 }
+	}
 	.section-wrapper {
 		max-width: $max-width;
 		margin: 0 auto;
