@@ -204,6 +204,23 @@ div.cover {
       font-weight: 700;
       line-height: 34px; }
 
+.mobile-nav .mobile-nav-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.3s; }
+  .mobile-nav .mobile-nav-button i {
+    font-size: 30px;
+    line-height: 40px; }
+.mobile-nav .mobile-nav-button:hover {
+  color: #afafaf;
+  transition-duration: 0.3s; }
+
 .navbar-fixed {
   background-color: black;
   -webkit-box-shadow: 0px 10px 29px -6px rgba(0, 0, 0, 0.45);
@@ -228,6 +245,9 @@ div.cover {
   .navbar-scroll .logo {
     display: none;
     transition: 0.3s; }
+
+.mobile-nav-dark .mobile-nav-button {
+  background-color: #000000; }
 
 /* /scss/_footer.scss */
 .footer {

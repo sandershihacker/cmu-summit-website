@@ -48,6 +48,29 @@
 		}
 	}
 
+// Mobile Nav
+	.mobile-nav {
+		.mobile-nav-button {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 40px;
+			height: 40px;
+			color: #ffffff;
+			text-align: center;
+			cursor: pointer;
+			i {
+				font-size: 30px;
+				line-height: 40px;
+			}
+			transition-duration: 0.3s;
+		}
+		.mobile-nav-button:hover {
+			color: #afafaf;
+			transition-duration: 0.3s;
+		}
+	}
+
 // For change
 	.navbar-fixed {
 		background-color: black;
@@ -84,3 +107,9 @@
 			transition: 0.3s;
 		}
   }
+
+	.mobile-nav-dark {
+		.mobile-nav-button {
+			background-color: #000000;
+		}
+	}

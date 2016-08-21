@@ -13,7 +13,7 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <div class="navbar navbar-scroll" id="navbar">
+    <div class="navbar navbar-scroll uk-hidden-small" id="navbar">
       <div class="navbar-wrapper">
         <div class="logo">
           <a href="index.html">SUMMIT</a>
@@ -25,6 +25,24 @@
           <a href="photos.html">Photos</a>
           <a href="courses.html">Courses</a>
           <a href="#about" data-uk-smooth-scroll="{offset: 80}">About Us</a>
+        </div>
+      </div>
+    </div>
+    <!--Mobile Navbar-->
+    <div class="mobile-nav uk-visible-small" id="mobile-nav">
+      <div class="mobile-nav-button" data-uk-offcanvas="{target:'#my-id'}">
+        <i class="uk-icon-bars"></i>
+      </div>
+      <div id="my-id" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+          <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+            <li><a href="#about" data-uk-smooth-scroll="{offset: 80}">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="teach.html">Teach</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
         </div>
       </div>
     </div>

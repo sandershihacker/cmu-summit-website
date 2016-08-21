@@ -5,12 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/summit.css" />
     <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="css/slidenav.min.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="js/jquery.js"></script>
     <script src="js/uikit.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
     <script src="js/summit.js"></script>
   </head>
   <body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar navbar-fixed uk-hidden-small">
+      <div class="navbar-wrapper">
+        <div class="logo">
+          <a href="index.html">SUMMIT</a>
+        </div>
+        <div class="navbar-links">
+          <a href="#" class="right-most-button">Register</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="teach.html">Teach</a>
+          <a href="photos.html">Photos</a>
+          <a href="courses.html">Courses</a>
+          <a href="index.html#about">About Us</a>
+        </div>
+      </div>
+    </div>
+    <!--Mobile Navbar-->
+    <div class="mobile-nav uk-visible-small mobile-nav-dark">
+      <div class="mobile-nav-button" data-uk-offcanvas="{target:'#my-id'}">
+        <i class="uk-icon-bars"></i>
+      </div>
+      <div id="my-id" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+          <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="photos.html">Photos</a></li>
+            <li><a href="teach.html">Teach</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="#">Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <h1>Photos</h1>
+    <div>
+      <h2>2015 Photos</h2>
+      <div id="photo-section-2015"></div>
+    </div>
+    <div>
+      <h2>2014 Photos</h2>
+      <div id="photo-section-2014"></div>
+    </div>
   </body>
 </html>
