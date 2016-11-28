@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Photos | CMU Summit</title>
@@ -32,10 +33,13 @@
     </div>
     <!--Mobile Navbar-->
     <div class="mobile-nav uk-visible-small mobile-nav-dark">
-      <div class="mobile-nav-button" data-uk-offcanvas="{target:'#my-id'}">
+      <div class="mobile-nav-button" data-uk-offcanvas="{target:'#side-nav'}">
         <i class="uk-icon-bars"></i>
       </div>
-      <div id="my-id" class="uk-offcanvas">
+      <div class="mobile-nav-home">
+        <a href="index.html">SUMMIT</a>
+      </div>
+      <div id="side-nav" class="uk-offcanvas">
         <div class="uk-offcanvas-bar">
           <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
             <li><a href="index.html#about">About Us</a></li>
@@ -49,14 +53,78 @@
       </div>
     </div>
 
-    <h1>Photos</h1>
-    <div>
-      <h2>2015 Photos</h2>
-      <div id="photo-section-2015"></div>
+    <div class="section-white">
+      <div class="section-wrapper">
+          <div class="photos-page">
+            <h1 class="header">Photos</h1>
+            <hr/>
+            <div>
+              <h2>2016 Photos</h2>
+              <div id="photo-section-2016" class="uk-grid" data-uk-grid-margin></div>
+            </div>
+            
+            <div>
+              <h2>2015 Photos</h2>
+              <div id="photo-section-2015" class="uk-grid" data-uk-grid-margin></div>
+            </div>
+            
+            <div>
+              <h2>2014 Photos</h2>
+              <div id="photo-section-2014" class="uk-grid" data-uk-grid-margin></div>
+            </div>
+          </div>
+      </div>
     </div>
-    <div>
-      <h2>2014 Photos</h2>
-      <div id="photo-section-2014"></div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="section-wrapper">
+        <div class="uk-grid">
+          <div class="uk-width-medium-4-10 uk-width-1-1">
+            <h2>Contact</h2>
+            <ul class="uk-list">
+              <li>
+                <p>General Information and Inquires</p>
+                <a href="mailto:carnegiemellonsummit@gmail.com">carnegiemellonsummit@gmail.com</a>
+              </li>
+              <li>
+                <p>Thomas Rainey - Advisor</p>
+                <a href="mailto:tjrainey@andrew.cmu.edu">tjrainey@andrew.cmu.edu</a>
+              </li>
+            </ul>
+          </div>
+          <div class="uk-width-medium-3-10 uk-width-1-1">
+            <h2>Organizers</h2>
+            <ul class="uk-list">
+              <li>Ann Rutt</li>
+              <li>Michelle Kyin</li>
+              <li>Velisa Li</li>
+              <li>Alex Reed</li>
+              <li>Kwanpo Cheng</li>
+              <li>Jeffrey He</li>
+              <li>Sam Gao</li>
+            </ul>
+          </div>
+          <div class="uk-width-medium-3-10 uk-width-1-1">
+            <h2>Links</h2>
+            <ul class="uk-list">
+              <li>
+                <a href="https://www.facebook.com/cmusummitorg"><i class="uk-icon-facebook"></i>Facebook</a>
+              </li>
+              <li>
+                <a href="https://thebridge.cmu.edu/organization/summit"><i class="uk-icon-road"></i>The Bridge</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="footer-wrapper">
+          &copy; CMU SUMMIT 2015-2016
+        </div>
+      </div>
     </div>
+
   </body>
 </html>

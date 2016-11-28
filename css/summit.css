@@ -11,6 +11,17 @@
   background: linear-gradient(#2ba3d4, #3498db);
   /* Standard syntax */ }
 
+.gradient-light, .section-white {
+  background: #efefef;
+  background: -webkit-linear-gradient(#efefef, #dfdfdf);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#efefef, #dfdfdf);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#efefef, #dfdfdf);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#efefef, #dfdfdf);
+  /* Standard syntax */ }
+
 * {
   margin: 0; }
 
@@ -21,12 +32,11 @@ body {
     font-family: "Open Sans";
     font-weight: 300; }
 
-.section-white {
-  background-color: #efefef; }
-
 .section-blue {
   color: #efefef; }
   .section-blue h1 {
+    color: #efefef; }
+  .section-blue h2 {
     color: #efefef; }
 
 .section-wrapper {
@@ -155,15 +165,22 @@ div.cover {
   text-decoration: none;
   color: #191919; }
 .about-section .demo-picture {
-  text-align: center; }
-  .about-section .demo-picture img {
-    height: 500px; }
+  text-align: center;
+  display: flex;
+  justify-content: center; }
+  .about-section .demo-picture div {
+    align-self: center; }
 
 .demo-picture-2 {
   text-align: center; }
   .demo-picture-2 img {
-    height: 400px; }
+    max-height: 500px; }
 
+@media only screen and (max-width: 478px) {
+  div.cover h1 {
+    font-size: 42px; }
+  div.cover p {
+    font-size: 18px; } }
 /* /scss/_navbar.scss */
 .navbar {
   position: fixed;
@@ -204,22 +221,47 @@ div.cover {
       font-weight: 700;
       line-height: 34px; }
 
-.mobile-nav .mobile-nav-button {
+.mobile-nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 40px;
+  width: 100%;
   height: 40px;
-  color: #ffffff;
-  text-align: center;
-  cursor: pointer;
-  transition-duration: 0.3s; }
-  .mobile-nav .mobile-nav-button i {
-    font-size: 30px;
+  padding: 0;
+  margin: 0;
+  z-index: 999;
+  text-align: center; }
+  .mobile-nav .mobile-nav-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.3s; }
+    .mobile-nav .mobile-nav-button i {
+      font-size: 30px;
+      line-height: 40px; }
+  .mobile-nav .mobile-nav-button:hover {
+    color: #efefef;
+    transition-duration: 0.3s; }
+  .mobile-nav .mobile-nav-home {
+    display: none;
     line-height: 40px; }
-.mobile-nav .mobile-nav-button:hover {
-  color: #afafaf;
-  transition-duration: 0.3s; }
+    .mobile-nav .mobile-nav-home a {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 18px;
+      transition-duration: 0.3s; }
+    .mobile-nav .mobile-nav-home a:hover {
+      color: #efefef;
+      transition-duration: 0.3s; }
+  .mobile-nav #side-nav {
+    text-align: left; }
 
 .navbar-fixed {
   background-color: black;
@@ -246,8 +288,12 @@ div.cover {
     display: none;
     transition: 0.3s; }
 
-.mobile-nav-dark .mobile-nav-button {
+.mobile-nav-dark {
   background-color: #000000; }
+  .mobile-nav-dark .mobile-nav-button {
+    background-color: #000000; }
+  .mobile-nav-dark .mobile-nav-home {
+    display: block; }
 
 /* /scss/_footer.scss */
 .footer {
@@ -278,3 +324,44 @@ div.cover {
     height: 50px;
     line-height: 50px;
     background-color: #191919; }
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    text-align: center; } }
+/* /scss/_courses.scss */
+div.courses-page h1.header {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+div.courses-page .uk-panel-box {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px; }
+
+/* /scss/_photos.scss */
+div.photos-page h1.header {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+div.photos-page h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-weight: 400; }
+div.photos-page img {
+  height: 200px;
+  border: solid 2px #505050;
+  border-radius: 3px; }
+div.photos-page .uk-grid div {
+  text-align: center; }
+
+/* /scss/_teach.scss */
+div.teach-page h1.header {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+div.teach-page h2 {
+  font-weight: 400; }
+div.teach-page h3 {
+  font-weight: 400; }
+
+/* /scss/_schedule.scss */
+div.schedule-page h1.header {
+  margin-top: 40px;
+  margin-bottom: 40px; }

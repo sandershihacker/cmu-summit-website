@@ -39,8 +39,10 @@
     }
     .demo-picture {
       text-align: center;
-      img {
-        height: 500px;
+      display: flex;
+      justify-content: center;
+      div {
+        align-self: center;
       }
     }
   }
@@ -48,6 +50,17 @@
   .demo-picture-2 {
     text-align: center;
     img {
-      height: 400px;
+      max-height: 500px;
+    }
+  }
+
+  @media only screen and (max-width: 478px) {
+    div.cover {
+      h1 {
+        font-size: 42px;
+      }
+      p {
+        font-size: 18px;
+      }
     }
   }

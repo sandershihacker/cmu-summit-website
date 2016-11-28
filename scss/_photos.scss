@@ -1,0 +1,22 @@
+/* /scss/_photos.scss */
+div.photos-page {
+    h1.header {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    h2 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-weight: 400;
+    }
+    img {
+        height: 200px;
+        border: solid 2px #505050;
+        border-radius: 3px;
+    }
+    .uk-grid {
+        div {
+            text-align: center;
+        }
+    }
+}

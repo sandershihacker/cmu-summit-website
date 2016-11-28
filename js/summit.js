@@ -24,7 +24,7 @@ $(document).ready(function() {
       var imageTags = "";
       $(data).find("a").attr("href", function(i, val) {
         if(val.match(/\.(jpe?g|png|gif)$/)) {
-          imageTags += "<a href='" + dir2014 + val + "' data-uk-lightbox=\"{group:'group-14'}\"><img src='" + dir2014 + val + "'></a>";
+          imageTags += "<div class='uk-width-medium-1-3 uk-width-large-1-4'><a href='" + dir2014 + val + "' data-uk-lightbox=\"{group:'group-14'}\"><img src='" + dir2014 + val + "'></a></div>";
         }
       });
       $("#photo-section-2014").html(imageTags);
@@ -39,10 +39,25 @@ $(document).ready(function() {
       var imageTags = "";
       $(data).find("a").attr("href", function(i, val) {
         if(val.match(/\.(jpe?g|png|gif)$/)) {
-          imageTags += "<a href='" + dir2015 + val + "' data-uk-lightbox=\"{group:'group-15'}\"><img src='" + dir2015 + val + "'></a>";
+          imageTags += "<div class='uk-width-medium-1-3 uk-width-large-1-4'><a href='" + dir2015 + val + "' data-uk-lightbox=\"{group:'group-15'}\"><img src='" + dir2015 + val + "'></a></div>";
         }
       });
       $("#photo-section-2015").html(imageTags);
+    }
+  });
+
+  // Picture Loop Section 2016
+  var dir2016 = "src/pictures/2016/";
+  $.ajax({
+    url: dir2016,
+    success: function(data) {
+      var imageTags = "";
+      $(data).find("a").attr("href", function(i, val) {
+        if(val.match(/\.(jpe?g|png|gif)$/)) {
+          imageTags += "<div class='uk-width-medium-1-3 uk-width-large-1-4'><a href='" + dir2016 + val + "' data-uk-lightbox=\"{group:'group-16'}\"><img src='" + dir2016 + val + "'></a></div>";
+        }
+      });
+      $("#photo-section-2016").html(imageTags);
     }
   });
 

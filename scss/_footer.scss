@@ -39,3 +39,9 @@
       background-color: $darker-grey;
     }
 	}
+
+  @media only screen and (max-width: 767px) {
+    .footer {
+      text-align: center;
+    }
+  }

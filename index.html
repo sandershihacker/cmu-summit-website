@@ -30,10 +30,13 @@
     </div>
     <!--Mobile Navbar-->
     <div class="mobile-nav uk-visible-small" id="mobile-nav">
-      <div class="mobile-nav-button" data-uk-offcanvas="{target:'#my-id'}">
+      <div class="mobile-nav-button" data-uk-offcanvas="{target:'#side-nav'}">
         <i class="uk-icon-bars"></i>
       </div>
-      <div id="my-id" class="uk-offcanvas">
+      <div class="mobile-nav-home">
+        <a href="index.html">SUMMIT</a>
+      </div>
+      <div id="side-nav" class="uk-offcanvas">
         <div class="uk-offcanvas-bar">
           <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
             <li><a href="#about" data-uk-smooth-scroll="{offset: 80}">About Us</a></li>
@@ -59,7 +62,8 @@
     <div class="section-white about-section" data-uk-sticky>
       <div class="section-wrapper">
         <div class="uk-grid">
-          <div class="uk-width-1-2">
+
+          <div class="uk-width-medium-1-2">
             <h1 id="about">What is Summit?</h1>
             <h3>Bhangra? Glass Blowing? Balloon Animal Making? Archery?</h3>
             <p>
@@ -83,11 +87,13 @@
               page to see previous classes. 
             </p>
           </div>
-          <div class="uk-width-1-2 demo-picture">
-            <div data-uk-scrollspy="{cls:'uk-animation-slide-right', repeat: true, delay: 300}">
+
+          <div class="uk-width-medium-1-2 demo-picture">
+            <div data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true, delay: 100}">
               <img src="src/pictures/indexBanners/1balloon.png">
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -95,8 +101,8 @@
     <!-- Food Housing and Costs -->
     <div class="section-blue">
       <div class="section-wrapper">
-        <div class="uk-grid">
-          <div class="uk-width-1-2">
+        <div class="uk-grid" data-uk-grid-margin>
+          <div class="uk-width-medium-1-2">
             <h1>Food, Housing and Costs</h1>
             <p>
               Summit offers a great opportunity to experience new activities, 
@@ -113,7 +119,8 @@
               on January 6th at 12pm, and you will be able to move in afterwards.
             </p>
           </div>
-          <div class="uk-width-1-2">
+
+          <div class="uk-width-medium-1-2">
             <h1>Important Registration Information</h1>
             <p>
               This year, Summit will be <strong>limited to only 50 participants</strong> 
@@ -131,9 +138,14 @@
             </p>
           </div>
         </div>
-        <div class="demo-picture-2">
-          <div data-uk-scrollspy="{cls:'uk-animation-slide-bottom', repeat: true, delay: 300}">
+        <div class="demo-picture-2 uk-hidden-small">
+          <div data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay: 100}">
             <img src="src/pictures/indexBanners/food3Words.png">
+          </div>
+        </div>
+        <div class="demo-picture-2 uk-visible-small">
+          <div data-uk-scrollspy="{cls:'uk-animation-slide-top', repeat: true, delay: 100}">
+            <img src="src/pictures/indexBanners/food1.png">
           </div>
         </div>
       </div>
